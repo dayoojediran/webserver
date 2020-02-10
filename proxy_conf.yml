@@ -6,9 +6,8 @@
 
   tasks:
   - name: Applying configuration Full
-    copy: src=file/{{ item }} dest=/etc/haproxy/{{ item }}
-    with_items:
-    - haproxy.cfg
+    copy: src=file/haproxy.cfg dest=/etc/haproxy/haproxy
+    
     
 
   - name: Reloading config
