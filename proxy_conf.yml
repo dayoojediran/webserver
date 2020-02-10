@@ -6,7 +6,7 @@
 
   tasks:
   - name: Applying configuration Full
-    template: src=templates/{{ item }} dest=/etc/haproxy/{{ item }}
+    copy: src=templates/{{ item }} dest=/etc/haproxy/{{ item }}
     with_items:
     - haproxy.cfg
     
