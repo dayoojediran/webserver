@@ -6,8 +6,6 @@
 
   tasks:
   - name: Copying content
-    copy: src=templates/{{ item }} dest={{ http_documentroot }}/{{ item }}
-    with_items:
-    
-    - index.html
+    template: src=templates/index.j2 dest={{ http_documentroot }}/index.html
+  
     
