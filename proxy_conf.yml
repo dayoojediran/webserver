@@ -8,7 +8,7 @@
   - name: Applying configuration Full
     template: src=templates/{{ item }} dest=/etc/haproxy/{{ item }}
     with_items:
-    - haproxy.cfg.j2
+    - haproxy.cfg
     
 
   - name: Reloading config
