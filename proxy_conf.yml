@@ -1,0 +1,15 @@
+---
+- hosts: lb
+  remote_user: root
+  vars_files:
+    - vars/httpd_vars.yml
+
+  tasks:
+  - name: Applying configuration Full
+    template: src=templates/{{ item }} dest=/etc/haproxy/{{ item }}
+    with_items:
+    - haproxy.cfg.j2
+    
+
+  - name: Reloading config
+    service: name=haproxy state=reloaded
