@@ -6,7 +6,7 @@
 
   tasks:
   - name: Applying configuration Full
-    copy: src=file/haproxy.cfg dest=/etc/haproxy/haproxy
+    copy: src=file/haproxy.txt dest=/etc/haproxy/haproxy.cfg
     
     
 
