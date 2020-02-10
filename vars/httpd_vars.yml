@@ -1,3 +1,0 @@
----
-http_documentroot: /var/www/html
-http_listen_port: 80
